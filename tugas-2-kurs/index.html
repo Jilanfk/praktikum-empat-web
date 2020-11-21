@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Kurs</title>
+    </head>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            background-color: aquamarine;
+                    
+        }
+        table   {
+            margin: 10px;
+            padding: 10px; 
+        }
+    </style>
+
+    <body>
+        <table>
+            <tr>
+                <th>Nilai</th>
+                <th>Valas</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+            <tr>
+                <td>
+                    <input id="uangLuar" value="" type="number" onchange="convertKurs()">
+                </td>
+                <td>
+                    <select id="listKurs" onchange="converKurs()">
+                        <option value="9915">Dollar AS</option>
+                        <option value="13742">Dollar Sing.</option>
+                        <option value="874">Ringgit</option>
+                        <option value="120">Yen</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal</option>
+
+                    </select>
+                </td>
+                <td>
+                    <input type="number" value="" id="convert">
+                </td>
+            </tr>
+        </table>
+        <script>
+            function convertKurs() {
+               let money = Number(document.getElementById("uangLuar").value)
+               let list = Number(document.getElementById("listKurs").value)
+                        
+               let hasilConvert = money * list
+               document.getElementById("convert").value = hasilConvert
+               }
+        </script>
+    </body>
+</html>

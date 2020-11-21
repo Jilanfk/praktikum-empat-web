@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function main() {
+            let Picture = document.getElementById("picture").value
+
+            if (Picture == "kucing"){
+                Picture = "https://i.pinimg.com/564x/92/ef/5a/92ef5ab191f3dedd1685325189126c08.jpg"
+                alert("Ini gambar kucing")
+                } else if (Picture == "echidna") {
+                Picture = "https://i.dailymail.co.uk/1s/2020/01/30/00/24058796-7945007-Bonorong_Wildlife_Sanctuary_in_Hobart_took_in_an_echidna_for_tre-a-17_1580344752610.jpg"
+                alert("Ini gambar echidna")
+                } else if (Picture == "anjing") {
+                Picture = "https://external-preview.redd.it/9BUh9XF6oRRCZ8TOI1qV0Wy8RBAXG9jaTQYLeIiPIIQ.jpg?width=640&crop=smart&auto=webp&s=a473e6673ec8c483c99ef557b841df0d2b457a4f"
+                alert("Ini gambar anjing")
+                } else if (Picture == "otter"){
+                Picture = "https://pbs.twimg.com/media/DuuXIMWU0AA-6U2?format=jpg&name=small"
+                alert("Ini gambar otter")
+                } else if (Picture == "anjing_laut"){
+                Picture = "https://img-9gag-fun.9cache.com/photo/aernBrO_700bwp.webp"
+                alert("Ini gambar anjing laut")
+                } else if (Picture == "rakun"){
+                Picture = "https://preview.redd.it/ex70vf0zeh841.jpg?width=960&crop=smart&auto=webp&s=c4579319d8e14d9997ddecd9c51064a46f57d1f3"
+                alert("Ini gambar rakun")
+                } else if (Picture == "burung"){
+                Picture = "https://img-9gag-fun.9cache.com/photo/ax1LmND_460s.jpg"
+                alert("Ini gambar burung")
+                }
+    document.getElementById("image").src = Picture
+}
+    </script>
+</head>
+<body>
+    <h1>Program Image Picker</h1>
+    <form>
+        <select name="" id="picture" onchange="main()">
+            <option value="kucing">Kucing</option>
+            <option value="echidna">Echidna</option>
+            <option value="anjing">Anjing</option>
+            <option value="otter">Otter</option>
+            <option value="anjing_laut">Anjing laut</option>
+            <option value="rakun">Rakun</option>
+            <option value="burung">Burung</option>
+        </select>
+    </form>
+    <img id="image" width="500" src="https://i.pinimg.com/564x/92/ef/5a/92ef5ab191f3dedd1685325189126c08.jpg" alt="">
+</body>
+</html>

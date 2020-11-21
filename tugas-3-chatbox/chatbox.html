@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box {
+            margin-left: 10px;
+            min-width: 30%;
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;}
+    </style>
+    <main>
+        <div class="box , result-chat">
+            <!-- <ul class="result-chat"></ul> -->
+        </div>
+        <div>
+            <input type="text" class="input-chat">
+            <button class="btn-chat">Send</button>
+        </div>
+    </main>
+
+    <script>
+        let resultChat = document.querySelector(".result-chat");
+        const inputChat = document.querySelector(".input-chat");
+        const btnChat = document.querySelector(".btn-chat");
+
+        btnChat.addEventListener("click", function()    {
+            resultChat.innerHTML = resultChat.innerHTML + "<br>" + "Pesan: " + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+</body>
+</html>
